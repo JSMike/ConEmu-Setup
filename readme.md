@@ -77,15 +77,15 @@ Comment out line ending with `show MSYSTEM`
 ### Installing WSL:
 [Windows Subsystem For Linux Installation Guide](https://msdn.microsoft.com/en-us/commandline/wsl/install_guide)
 
-Change the startup to use {Bash::bash}, if this isn’t listed then select reset at the bottom
+Change the startup to use `{Bash::bash}`, if this isn’t listed then select reset at the bottom.
 
 ![](conemu-9.png)
 
 Extra details about using Windows Subsystems for Linux with ConEmu:
 http://conemu.github.io/en/BashOnWindows.html
-Updating PS1:
-http://mediadoneright.com/content/ultimate-git-ps1-bash-prompt
-Installing NodeJS on WSL:
+
+
+### Installing NodeJS on WSL:
 
 ```
 sudo apt-get update
@@ -94,7 +94,14 @@ curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash –
 sudo apt-get install -y nodejs
 ```
 
-### My suggestions:
+### Updating PS1:
+
+[Ultimate GIT PS1 bash prompt](http://mediadoneright.com/content/ultimate-git-ps1-bash-prompt)
+
+Copy the snippet in the article to `~/.bash_aliases`
+
+#### My PS1 suggestions/tweaks:
+
 Add the following to "various variables":
 
 ```
@@ -108,7 +115,7 @@ Replace exports line with: (this mimics the user@host:/path for things like scp)
 export PS1=$Title$NewLine$BIBlue$USER@$HOSTNAME:$IYellow$PathShort$Color_Off'$(git branch &>/dev/null;\
 ```
 
-[Or copy](.bash_aliases)
+[Or use this copy of .bash_aliases](.bash_aliases)
 
 ### FYI:
 You can then open up terminals for any prompt type found by ConEmu by using the + on the top right:
